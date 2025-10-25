@@ -5,8 +5,8 @@ int main() {
         //DECLARAÇÃO DAS VARIÁVEIS
 int movimento_bispo = 1,
     movimento_torre = 1,
-    movimento_rainha = 1;
-
+    movimento_rainha = 1,
+    movimento_esquerda = 1;
 
     //MOVIMENTO DO BISPO
 
@@ -34,6 +34,21 @@ printf("Movimento da Rainha:\n");
 for (movimento_rainha; movimento_rainha <= 8; movimento_rainha++){
     printf("Esquerda\n");
 }
+printf("\n");
+
+
+    //MOVIMENTO DO CAVALO
+
+printf("Movimento do cavalo:\n");
+do
+{
+    for (int movimento_baixo = 1; movimento_baixo <= 2; movimento_baixo++)
+    {
+        printf("Baixo\n");
+    }
+printf("Esquerda\n");
+movimento_esquerda++;
+} while (movimento_esquerda <= 1);
 printf("\n");
 
 return 0;
