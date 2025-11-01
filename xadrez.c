@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+        //PROGRAMA NÍVEL AVENTUREIRO
+
+/*
 int main() {
 
         //DECLARAÇÃO DAS VARIÁVEIS
@@ -51,5 +54,75 @@ movimento_esquerda++;
 } while (movimento_esquerda <= 1);
 printf("\n");
 
+return 0;
+}
+*/
+
+
+        // PROGRAMA NÍVEL MESTRE
+
+void bispo(int casas)
+{
+    if (casas > 0)
+    {
+        printf("DIREITA\n");
+        bispo(casas - 1);
+        printf("CIMA\n");
+    }
+}
+
+void torre (int casas)
+{
+    if (casas > 0)
+    {
+        printf("DIREITA\n");
+        torre(casas - 1);
+    }
+
+}
+
+void rainha (int casas)
+{
+    if (casas > 0)
+    {
+        printf("ESQUERDA\n");
+        rainha(casas - 1);
+    }
+
+}
+
+void cavalo (casas)
+{
+    if (casas > 0)
+    {
+        for (int n = 2; n > 0; printf("CIMA\n"), n--);
+        printf("DIREITA\n");
+        cavalo(casas - 1);
+    }
+}
+
+int main()
+{
+    int movimento_bispo = 5,
+        movimento_torre = 5,
+        movimento_rainha = 8,
+        movimento_cavalo = 1;
+
+    printf("MOVIMENTO DO BISPO\n");
+    bispo(movimento_bispo);
+    printf("\n");
+
+    printf("MOVIMENTO DA TORRE\n");
+    torre(movimento_torre);
+    printf("\n");
+
+    printf("MOVIMENTO DA RAINHA\n");
+    rainha(movimento_rainha);
+    printf("\n");
+
+    printf("MOVIMENTO DO CAVALO\n");
+    cavalo(movimento_cavalo);
+    printf("\n");
+    
 return 0;
 }
